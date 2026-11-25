@@ -1,0 +1,31 @@
+---
+// The BrandzStory "B" mark, drawn as SVG so each stripe can animate.
+const { size = 'hero', id = 'b' } = Astro.props;
+const stripes = Array.from({ length: 12 }, (_, i) => i);
+const w = 540 / stripes.length;
+---
+<svg class={`logo-b logo-b--${size}`} viewBox="0 0 540 620" aria-label="The BrandzStory" role="img">
+  <defs>
+    <linearGradient id={`${id}-g`} x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fd0f5" />
+      <stop offset=".55" stop-color="#0f5fe0" />
+      <stop offset="1" stop-color="#020b2e" />
+    </linearGradient>
+    <linearGradient id={`${id}-shade`} x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".18" />
+      <stop offset=".5" stop-color="#fff" stop-opacity="0" />
+      <stop offset="1" stop-color="#000" stop-opacity=".35" />
+    </linearGradient>
+    <clipPath id={`${id}-clip`}>
+      <path d="M0 0H330C470 0 520 78 520 150C520 214 482 268 418 292C500 312 540 382 540 452C540 552 466 620 340 620H0Z" />
+    </clipPath>
+  </defs>
+  <g clip-path={`url(#${id}-clip)`}>
+    {stripes.map((i) => (
+      <g class="b-stripe" data-i={i}>
+        <rect x={i * w} y="0" width={w + 0.5} height="620" fill={`url(#${id}-g)`} />
+        <rect x={i * w} y="0" width={w + 0.5} height="620" fill={`url(#${id}-shade)`} />
+      </g>
+    ))}
+  </g>
+</svg>

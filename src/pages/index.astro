@@ -1,0 +1,269 @@
+---
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/700.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '../styles/global.css';
+import LogoB from '../components/LogoB.astro';
+
+const svcCards = [
+  {
+    t: 'Branding & Media',
+    tags: ['Social Media Marketing', 'Posts · Reels · Stories', 'Content Strategy', 'Logos & Brand Identity', 'Brochures & Packaging'],
+    d: 'We build brands people remember and feeds people stop for: social media marketing with posts, reels, stories and content strategy, plus logos, brand identity, brochures and packaging that tell your story beautifully.',
+    v: '/videos/branding.mp4',
+  },
+  {
+    t: 'Production',
+    tags: ['Food & Product Shoots', 'Corporate & Events', 'Brand Films', 'Drone Shoots', 'Ad Videos'],
+    d: 'Cinematic photography and videography for food, products, corporate and events. Brand films, drone shoots and advertisement videos, produced end to end by our in-house team.',
+    v: '/videos/growth.mp4',
+  },
+  {
+    t: 'Technology',
+    tags: ['Business Websites', 'Restaurant Websites', 'Landing Pages', 'AI Chatbots', 'WhatsApp & CRM Automation'],
+    d: 'Fast, premium websites (business, restaurant and landing pages) combined with AI chatbots, WhatsApp automation and CRM that capture leads and follow up 24/7.',
+    v: '/videos/websites.mp4',
+  },
+];
+const clients = [
+  { name: 'Rasikas', img: '/clients/rasikas.png' },
+  { name: 'Rasikas Grand Fusion', img: '/clients/rasikas-grand-fusion.png' },
+  { name: 'Hillside Restaurant', img: '/clients/hillside.png' },
+  { name: 'Vihaa', img: '/clients/vihaa.png' },
+  { name: 'Annapoorani Avenue', img: '/clients/annapoorani-avenue.png' },
+  { name: 'Ashwa Vihara', img: '/clients/ashwa-vihara.png' },
+  { name: 'Sakthi Groups', img: '/clients/sakthi-groups.png' },
+  { name: 'Sky Mart', img: '/clients/skymart.png' },
+  { name: 'Prakash Food Park', img: '/clients/prakash-food-park.png' },
+  { name: 'Pavilion Dine', img: '/clients/pavilion-dine.png' },
+  { name: 'Arokya', img: '/clients/arokya.png' },
+];
+const impact = [
+  { to: 5.5, dec: 1, suf: 'M+', l: 'Views Generated' },
+  { to: 2.7, dec: 1, suf: 'M+', l: 'People Reached' },
+  { to: 475, suf: 'K+', l: 'Engagements Earned' },
+  { to: 8.8, dec: 1, suf: 'K+', l: 'New Followers Won' },
+  { to: 10, suf: '+', l: 'Brands Grown' },
+  { to: 30, suf: 'K+', l: 'Own Community' },
+];
+const steps = [
+  { t: 'Discover & Define', d: 'We study your business, audience and market to define clear goals and a strategy built for measurable results.',
+    icon: '<svg viewBox="0 0 120 120"><circle cx="52" cy="52" r="30" class="s"/><path d="M74 74l26 26" class="s"/><path d="M40 52h24M52 40v24" class="s a"/></svg>' },
+  { t: 'Design & Deliver', d: 'Our specialists craft the brand, content and technology, reviewed with you at every milestone.',
+    icon: '<svg viewBox="0 0 120 120"><rect x="18" y="26" width="84" height="60" rx="8" class="s"/><path d="M40 100h40M60 86v14" class="s"/><path d="M36 56l12-12 14 14 10-8 12 12" class="s a"/></svg>' },
+  { t: 'Launch & Scale', d: 'We go live, measure what matters and keep optimising, so your growth compounds month after month.',
+    icon: '<svg viewBox="0 0 120 120"><path d="M60 14c18 10 26 30 22 54H38c-4-24 4-44 22-54z" class="s"/><circle cx="60" cy="44" r="8" class="s a"/><path d="M38 68l-14 16 18-2M82 68l14 16-18-2M52 90l8 18 8-18" class="s"/></svg>' },
+];
+const team = [
+  { role: 'Digital Marketing Lead', team: 'Growth & Strategy', icon: '📈', hue: 215 },
+  { role: 'Social Media Strategist', team: 'Content Team', icon: '📱', hue: 200 },
+  { role: 'Video Editor', team: 'Production Team', icon: '🎬', hue: 225 },
+  { role: 'Photographer & Cinematographer', team: 'Production Team', icon: '📸', hue: 205 },
+  { role: 'Brand Designer', team: 'Creative Team', icon: '🎨', hue: 230 },
+  { role: 'AI Engineer', team: 'AI & Automation Team', icon: '🤖', hue: 195 },
+  { role: 'Web Developer', team: 'Tech Team', icon: '💻', hue: 220 },
+  { role: 'Automation Specialist', team: 'AI & Automation Team', icon: '⚙️', hue: 210 },
+];
+const phone = '918754802445';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The BrandzStory | Creative & Tech Studio, Salem</title>
+  <meta name="description" content="A Story Behind Every Brand. Reels, branding, websites and AI automation for growing businesses in Salem." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="flow-bg" aria-hidden="true"><span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span></div>
+  <!-- NAV -->
+  <header class="nav">
+    <a class="nav__logo" href="#top"><LogoB size="nav" id="navb" /><span>THE BRANDZSTORY</span></a>
+    <nav class="nav__links">
+      <a href="#services">Services</a><a href="#impact">Work</a><a href="#process">Process</a><a href="#about-us">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--gloss btn--sm btn--shine" href="#contact">Let's Talk</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__lines" aria-hidden="true">
+      {Array.from({ length: 32 }, (_, i) => <span class="hero__line" style={`--i:${i}`}></span>)}
+    </div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__content">
+      <div class="hero__logo"><LogoB id="herob" /></div>
+      <p class="hero__tag reveal-line">CREATIVE &amp; TECH</p>
+      <h1 class="hero__title split">A Story Behind<br /><span class="hero__dark">Every Brand.</span></h1>
+      <p class="hero__sub reveal-line">Reels, branding, websites and AI automation, built to grow your business.</p>
+      <div class="hero__cta reveal-line">
+        <a class="btn btn--gloss btn--shine" href="mailto:thebrandzstory@gmail.com?subject=New%20project%20enquiry">Start a Project</a>
+        <a class="btn btn--glass btn--shine" href="#impact">See Our Work →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WELCOME (light) -->
+  <section class="welcome theme-light" id="about-us">
+    <div class="welcome__sweep" aria-hidden="true"></div>
+    <div class="light-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="welcome__media">
+      <div class="welcome__photo"><img src="/images/welcome-poster.jpg" alt="The BrandzStory: driving brand growth through creativity, strategy and technology" loading="lazy" /></div>
+    </div>
+    <div class="welcome__text">
+      <p class="welcome__lbl reveal-slow">WELCOME</p>
+      <h2 class="welcome__title split-slow">Transforming your business strategy for sustainable growth and innovation</h2>
+      <hr class="welcome__rule" />
+      <p class="welcome__body reveal-slow">We combine creative storytelling with smart technology (reels, branding, websites and AI automation) to help Salem businesses get seen, win customers and grow, step by step.</p>
+      <a class="btn btn--outline reveal-slow" href="#services">More Details</a>
+    </div>
+  </section>
+
+  <!-- STORY + CLIENTS + IMPACT (blue) -->
+  <section class="story theme-blue" id="clients">
+    <h2 class="stmt"><span class="split-line">Your Brand. Our Story.</span><br /><span class="flip-line">Shared <span class="flip" aria-label="Success and Growth"><span class="flip__inner"><span class="flip__word grad">Success.</span><span class="flip__word flip__word--alt">Growth.</span></span></span></span></h2>
+
+    <div class="clients">
+      <div class="marquee" aria-label="Our clients">
+        <div class="marquee__track">
+          {[...clients, ...clients].map((c, i) => (
+            <div class="logo-circle" aria-hidden={i >= clients.length ? 'true' : undefined}>
+              {c.img ? <img src={c.img} alt={c.name} loading="lazy" /> : <span>{c.name}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="impact" id="impact">
+      <p class="lbl">THE IMPACT</p>
+      <h3 class="clients__title split">Numbers that speak<br />louder than words.</h3>
+      <div class="impact__grid">
+        {impact.map((s) => (
+          <div class="impact__item">
+            <b class="glow-num"><span class="count" data-to={s.to} data-dec={s.dec ?? 0}>0</span>{s.suf}</b>
+            <span class="impact__label">{s.l}</span>
+          </div>
+        ))}
+      </div>
+      <a class="kz fade-up" href="https://www.instagram.com/thekuttizstory" target="_blank" rel="noopener">
+        <span class="kz__badge">ALSO BY US</span>
+        <img class="kz__logo" src="/images/kuttizstory.png" alt="The KuttizStory logo" loading="lazy" />
+        <div class="kz__main">
+          <p class="kz__eyebrow">The creators behind</p>
+          <h3 class="kz__name">THE KUTTIZSTORY</h3>
+          <p class="kz__desc">Our own influencer page, a community we built from zero.</p>
+        </div>
+        <div class="kz__stat"><b class="glow-num"><span class="count" data-to="30" data-dec="0">0</span>K+</b><span class="kz__label">Followers on Instagram</span></div>
+        <span class="kz__cta">Follow ↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- OUR SERVICES (pinned, stacked cards) -->
+  <section class="svc theme-light" id="services">
+    <div class="svc__blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="svc__pin">
+      <div class="svc__intro">
+        <h2 class="svc__title"><span>OUR</span><span>SERVICES</span></h2>
+        <svg class="svc__arrow" viewBox="0 0 100 100" aria-hidden="true"><path d="M20 80 L80 20 M35 20 H80 V65" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square"/></svg>
+      </div>
+      {svcCards.map((c, i) => (
+        <article class="svc__card" data-i={i}>
+          <div class="svc__copy">
+            <p class="svc__num">0{i + 1} / 03</p>
+            <h3>{c.t}</h3>
+            <div class="svc__tags">{c.tags.map((t) => <span>{t}</span>)}</div>
+            <p class="svc__desc">{c.d}</p>
+          </div>
+          <div class="svc__media">
+            <video src={c.v} autoplay muted loop playsinline preload="metadata"></video>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+
+  <!-- HOW WE WORK: 3 steps with scroll line (white) -->
+  <section class="steps theme-blue" id="process">
+    <div class="steps__head">
+      <p class="tag-dot">Our Process</p>
+      <h2 class="steps__title split">From vision to<br />measurable growth.</h2>
+      <p class="steps__sub fade-up">A proven framework that blends strategy, creativity and technology, with full transparency at every stage.</p>
+    </div>
+    <div class="steps__track">
+      <div class="steps__line"><span class="steps__fill"></span></div>
+      {steps.map((st, i) => (
+        <div class={`step ${i % 2 ? 'step--left' : 'step--right'}`}>
+          <span class="step__dot"></span>
+          <div class="step__art" aria-hidden="true" set:html={st.icon}></div>
+          <div class="step__book">
+          <div class="step__card">
+            <h3>{st.t}</h3>
+            <p>{st.d}</p>
+          </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- TEAM: fanned card carousel (blue) -->
+  <section class="team-sec theme-light" id="team">
+    <div class="light-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="team-sec__ghost" aria-hidden="true">Team</div>
+    <div class="team-sec__head">
+      <div>
+        <p class="tag-dot">{'{20+}'} Team members</p>
+        <h2 class="team-sec__title fill-text">Driven by talent &amp;<br />creative souls</h2>
+      </div>
+      <p class="team-sec__text fill-text">At The BrandzStory, great work starts with great people. Our team of creatives, marketers, AI engineers and developers works as one, from first idea to final result.</p>
+    </div>
+    <div class="fan" data-fan>
+      <button class="fan__btn fan__btn--prev" aria-label="Previous">←</button>
+      <div class="fan__stage">
+        {team.map((m, i) => (
+          <article class="fan__card" data-i={i} style={`--hue:${m.hue}`}>
+            <div class="fan__art" aria-hidden="true"><span>{m.icon}</span></div>
+            <span class="fan__plus" aria-hidden="true">+</span>
+            <div class="fan__info"><h3>{m.role}</h3><p>{m.team}</p></div>
+          </article>
+        ))}
+      </div>
+      <button class="fan__btn fan__btn--next" aria-label="Next">→</button>
+    </div>
+    <a class="team-sec__more" href={`https://wa.me/${phone}`} target="_blank" rel="noopener">Work with our <b>team</b> →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="site-footer__cta">
+      <h2 class="split">Let's make your brand<br /><span class="grad">our next success story.</span></h2>
+      <div class="hero__cta" style="justify-content:flex-start">
+        <a class="btn btn--gloss btn--shine" href="mailto:thebrandzstory@gmail.com?subject=New%20project%20enquiry">Start a Project</a>
+        <a class="btn btn--glass" href="mailto:thebrandzstory@gmail.com">Email Us ↗</a>
+      </div>
+    </div>
+    <div class="site-footer__grid">
+      <div class="site-footer__brand"><div class="footer__brand"><LogoB size="nav" id="footb" /> THE BRANDZSTORY</div><p>A Story Behind Every Brand. Creative &amp; Tech studio from Salem.</p><div class="founder"><b>Anandh Ravikumar</b><span>Founder &amp; Brand Director</span></div></div>
+      <div><h4>Explore</h4><a href="#services">Services</a><a href="#clients">Clients</a><a href="#process">Process</a><a href="#team">Team</a></div>
+      <div><h4>Contact</h4><a href="tel:+918754802445">+91 87548 02445</a><a href="mailto:thebrandzstory@gmail.com">thebrandzstory@gmail.com</a><span>Salem, Tamil Nadu, India</span></div>
+      <div><h4>Follow</h4><a href="https://www.instagram.com/thebrandzstory" target="_blank" rel="noopener">Instagram ↗</a><a href={`https://wa.me/${phone}`} target="_blank" rel="noopener">WhatsApp ↗</a></div>
+    </div>
+    <div class="site-footer__bottom"><span>© 2026 The BrandzStory. All rights reserved.</span><span>Made with ♥ in Salem</span></div>
+    <div class="site-footer__word" aria-hidden="true">THE BRANDZSTORY</div>
+  </footer>
+
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>
